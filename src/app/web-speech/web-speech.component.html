@@ -1,0 +1,45 @@
+<br>
+<br>
+
+<div class="button-position">
+  <button mat-fab (click)="startButton($event)">
+    <mat-icon *ngIf="!recognizing">mic</mat-icon>
+    <mat-icon *ngIf="recognizing">stop</mat-icon>
+  </button>
+</div>
+<form>
+
+  <!-- <mat-form-field class="speech-result-width">
+    <input class="form-control" placeholder="Start searching for by id or name or status" type="text" name="search" matInput [value]="finalTranscript" [(ngModel)]="finalTranscript" autocomplete="off">
+
+  </mat-form-field> -->
+</form>
+
+<table id="sortTable" class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Weight</th>
+      <th>Gender</th>
+      <th>Status</th>
+      <th>Job</th>
+      <th>Education</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let group of data">
+         <td>{{group.Id}}</td>
+         <td>{{group.FirstName}}</td>
+         <td>{{group.LastName}}</td>
+         <td>{{group.Weight}}</td>
+         <td>{{group.Gender}}</td>
+         <td>{{group.Status}}</td>
+         <td>{{group.Job}}</td>
+         <td>{{group.Education}}</td>
+         <td>{{group.Location}}</td>         
+     </tr>
+  </tbody>
+</table>

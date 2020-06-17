@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <span><mat-icon>eco</mat-icon> App</span>
+   
+    <div class="spacer"></div>
+    
+    
+    <div class="dropdown">
+        <a class="dropbtn" mat-button (click)="homeButton()">Home</a>
+                <div class="dropdown-content">
+                    <a mat-button (click)="link()">A</a>
+                    <a mat-button (click)="link()">B</a>
+                    <a mat-button (click)="link()">C</a>
+                </div>
+    </div>
+    <a mat-button (click)="ServiceButton()">Services</a>
+    <a mat-button (click)="productsButton()">Projects</a>
+    <a mat-button (click)="aboutUsButton()">About Us</a>
+    <!-- <a mat-raised-button color="accent">Home</a> -->
+</mat-toolbar>
+
+<wsa-home *ngIf="homeFlag"></wsa-home>
+<wsa-services *ngIf="serviceFlag"></wsa-services>
+<wsa-products *ngIf="productsFlag"></wsa-products>
+<wsa-aboutus *ngIf="aboutusFlag"></wsa-aboutus>
+
+<wsa-web-speech></wsa-web-speech>
